@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">CleverNote</string>
+    <string name="title_home">Notes</string>
+    <string name="title_dashboard">Task</string>
+    <string name="title_notifications">Reminder</string>
+    <string name="extended_fab_label">Create</string>
+    <string name="extended_fab_desc">Create</string>
+    <string name="delete_all_notes">Delete all notes</string>
+    <string name="title">Title</string>
+    <string name="desc">Description</string>
+    <string name="edit_note">Edit Note</string>
+    <string name="add_note">Add Note</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="add_task">Add Task</string>
+    <string name="add_subtask">Add Subtask</string>
+    <string name="empty_field">Field cannot be empty</string>
+    <string name="finish_all_tasks">Finish all tasks</string>
+    <string name="finish_all_subtasks">Finish all subtasks</string>
+</resources>

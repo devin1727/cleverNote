@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="id.ac.ui.cs.mobileprogramming.devinwinardi.clevernote">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="mobileprogramming.devinwinardi.clevernote.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="mobileprogramming.devinwinardi.clevernote.ui.note.AddEditNoteActivity"
+            android:parentActivityName="mobileprogramming.devinwinardi.clevernote.MainActivity"/>
+        <activity android:name="mobileprogramming.devinwinardi.clevernote.ui.task.AddTaskActivity"
+            android:parentActivityName="mobileprogramming.devinwinardi.clevernote.MainActivity"/>
+        <receiver android:name="mobileprogramming.devinwinardi.clevernote.ui.reminder.AlertReceiver" />
+
+    </application>
+
+</manifest>

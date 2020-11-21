@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CleverNote</string>
+    <string name="title_home">Catatan</string>
+    <string name="title_dashboard">Tugas</string>
+    <string name="title_notifications">Pengingat</string>
+    <string name="extended_fab_label">Tambah</string>
+    <string name="extended_fab_desc">Tambah</string>
+    <string name="delete_all_notes">Hapus semua catatan</string>
+    <string name="title">Judul</string>
+    <string name="desc">Deskripsi</string>
+    <string name="edit_note">Edit Catatan</string>
+    <string name="add_note">Tambah Catatan</string>
+    <string name="edit_task">Edit Tugas</string>
+    <string name="add_task">Tambah Tugas</string>
+    <string name="add_subtask">Tambah Subtugas</string>
+    <string name="empty_field">Tidak boleh kosong</string>
+    <string name="finish_all_tasks">Selesaikan semua tugas</string>
+    <string name="finish_all_subtasks">Selesaikan semua subtugas</string>
+</resources>

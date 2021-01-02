@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="mobileprogramming.devinwinardi.clevernote.ui.reminder.ReminderFragment"
+        android:name="mobileprogramming.devinwinardi.clevernote.ui.task.PermissionFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_task" />
+        tools:layout="@layout/req_permission" />
 </navigation>

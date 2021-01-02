@@ -1,5 +1,6 @@
 package mobileprogramming.devinwinardi.clevernote.ui.note;
 
+import android.app.Notification;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,8 +10,12 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import id.ac.ui.cs.mobileprogramming.devinwinardi.clevernote.R;
+
+import static mobileprogramming.devinwinardi.clevernote.MainActivity.CHANNEL_1_ID;
 
 public class AddEditNoteActivity extends AppCompatActivity {
     public static final String EXTRA_ID =
@@ -21,6 +26,7 @@ public class AddEditNoteActivity extends AppCompatActivity {
             "EXTRA_DESCRIPTION";
     private EditText editTextTitle;
     private EditText editTextDescription;
+    private NotificationManagerCompat notificationManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +36,8 @@ public class AddEditNoteActivity extends AppCompatActivity {
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_close);
 
         Intent intent = getIntent();
+
+        notificationManager = NotificationManagerCompat.from(this);
 
         if(intent.hasExtra(EXTRA_ID)){
             setTitle(getResources().getString(R.string.edit_note));
@@ -46,6 +54,16 @@ public class AddEditNoteActivity extends AppCompatActivity {
             Toast.makeText(this, "Please insert a title and description", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        Notification notification = new NotificationCompat.Builder(this, CHANNEL_1_ID)
+                .setSmallIcon(R.drawable.ic_android)
+                .setContentTitle("Note Saved!")
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+                .build();
+
+        notificationManager.notify(1, notification);
+
         Intent data = new Intent();
         data.putExtra(EXTRA_TITLE, title);
         data.putExtra(EXTRA_DESCRIPTION, description);
